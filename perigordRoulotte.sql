@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Base de données: `perigordroulottes`
 --
-DROP DATABASE IF EXISTS perigordroulottes
+DROP DATABASE IF EXISTS perigordroulottes;
 CREATE DATABASE IF NOT EXISTS `perigordroulottes` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 USE `perigordroulottes`;
 
