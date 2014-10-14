@@ -94,3 +94,13 @@ section #form_reserv input.button
     width: 20% ;
     margin-right: 18% ;
 }
+
+section .msgerror
+{
+    margin: auto ;
+    padding: 1% ;
+    width: 50% ;
+    
+    border: 3px #FF0000 inset ;
+    background-color: #ff2222 ;
+}

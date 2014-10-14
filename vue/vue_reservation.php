@@ -4,6 +4,12 @@
 <section>
     <h1>Pré-réservation</h1>
     <br />
+    <?php
+        if(isset($msg_error))
+        {
+            echo '<div class="msgerror">'.$msg_error.'</div>' ;
+        }
+    ?>
     <p>
         Avant de faire une demande de réservation, veuillez consulter
         nos <a href="index.php?section=tarifs">tarifs</a> et nos 
@@ -11,7 +17,7 @@
     </p>
     <br />
     <div id="form_reserv">
-        <form method="post" action="reserv_roulotte.php">
+        <form method="post" action="index.php?section=reserv_roul">
 
             <p>Nom : <input type="text" name="nomclient" class="texte"/></p>
             <p>Prenom : <input type="text" name="prenomclient" class="texte"/></p>
@@ -23,7 +29,7 @@
                 <?php
                     foreach($liste_sejours as $unsejour)
                     {
-                        echo '<option value="'.$unsejour['NbJours'].'">'.$unsejour['NomSejour'].'</option>' ;
+                        echo '<option value="'.$unsejour['NbJours'].'">'.$unsejour['NomSejour'].' ['.$unsejour['NbJours'].'jours] </option>' ;
                     }
                 ?>
             </select></p><br />
