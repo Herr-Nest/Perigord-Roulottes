@@ -56,9 +56,36 @@ nav ul
     padding: 0 ;
 }
 
+nav a
+{
+    font-size: 1em ;
+}
+
 section
 {
     width: 100% ;
     background-color: white ;
     text-align: center ;
+    
+    padding: 1% ;
+}
+
+section #form_reserv input, section #form_reserv select
+{
+    width: 50% ;
+}
+
+section #form_reserv
+{
+    width: 50% ;
+    text-align: right ;
+    
+    margin: auto ;
+    padding-right: 22% ;
+}
+
+section #form_reserv input.button
+{
+    width: 20% ;
+    margin-right: 18% ;
 }
