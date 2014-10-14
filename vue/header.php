@@ -13,10 +13,10 @@
         <nav>
             <ul>
                 <li>Accueil</li><!--
-                --><li>Item_2</li><!--
-                --><li>Item_3</li><!--
-                --><li>Item_4</li><!--
-                --><li>Item_5</li><!--
+                --><li>Présentaton des séjours</li><!--
+                --><li>Tarifs</li><!--
+                --><li>Réservation</li><!--
+                --><li>Livre d'or</li><!--
             --></ul>
         </nav>
     </body>
