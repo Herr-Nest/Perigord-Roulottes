@@ -8,7 +8,6 @@
 		$req -> execute();
 		$sejour =$req->fetchAll();
 		return $sejour
-		
 	}
 
 
