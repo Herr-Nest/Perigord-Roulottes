@@ -30,7 +30,5 @@
 		Bienvenue dans le site Perigord Roulottes<br />
 		Bienvenue dans le site Perigord Roulottes<br />
 		Bienvenue dans le site Perigord Roulottes<br />
-		
-		</p>
-	
-	</section>
+		</p><!--
+	--></section>
