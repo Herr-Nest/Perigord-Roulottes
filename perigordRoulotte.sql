@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 14 Octobre 2014 à 14:20
+-- Généré le :  Mar 14 Octobre 2014 à 14:25
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `perigordroulottes`
 --
+CREATE DATABASE IF NOT EXISTS `perigordroulottes` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `perigordroulottes`;
 
 -- --------------------------------------------------------
 
