@@ -7,7 +7,9 @@
 		$req = $bdd -> prepare("SELECT * FROM etape ");
 		$req -> execute();
 		$sejour =$req->fetchAll();
-		return $sejour
+
+		return $sejour;
+		
 	}
 
 
