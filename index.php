@@ -16,6 +16,9 @@
 			case 'sejours':
 				include_once('controleur/presentationSejour.php');
 				break;
+                        case 'reservation' :
+                                include_once('controleur/reservation.php');
+                                break ;
 		}
 	}
 ?>
