@@ -3,12 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp/www/GitHub/Perigord-Roulottes/vue/vue_accueil.php</file>
             <file>file:/C:/wamp/www/GitHub/Perigord-Roulottes/vue/vue_reservation.php</file>
             <file>file:/C:/wamp/www/GitHub/Perigord-Roulottes/vue/style.css</file>
+            <file>file:/C:/wamp/www/GitHub/Perigord-Roulottes/modele/connexionBdd.php</file>
             <file>file:/C:/wamp/www/GitHub/Perigord-Roulottes/index.php</file>
+            <file>file:/C:/wamp/www/GitHub/Perigord-Roulottes/modele/mod_tarifs.php</file>
             <file>file:/C:/wamp/www/GitHub/Perigord-Roulottes/vue/header.php</file>
-            <file>file:/C:/wamp/www/GitHub/Perigord-Roulottes/controleur/accueil.php</file>
+            <file>file:/C:/wamp/www/GitHub/Perigord-Roulottes/controleur/reservation.php</file>
+            <file>file:/C:/wamp/www/GitHub/Perigord-Roulottes/vue/vue_tarifs.php</file>
         </group>
     </open-files>
 </project-private>
