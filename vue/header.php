@@ -12,9 +12,9 @@
         </header>
         <nav>
             <ul>
-                <li>Accueil</li><!--
-                --><li>Présentaton des séjours</li><!--
-                --><li>Tarifs</li><!--
+                <li><a href='index.php?section=index'>Accueil</a></li><!--
+                --><li><a href='index.php?section=sejours'>Présentaton des séjours</a></li><!--
+                --><li><a href='index.php?section=tarifs'>'Tarifs</a></li><!--
                 --><li>Réservation</li><!--
                 --><li>Livre d'or</li><!--
             --></ul>
