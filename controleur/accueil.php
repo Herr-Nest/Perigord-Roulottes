@@ -1,22 +1,4 @@
-<html>	
+<?php
 
-	<head>
-	
-		 <link rel="stylesheet" href="vue/style.css" />
-		 
-	</head>
-	
-	<body>
-	
-			
-		
-	</body>
-		
-</html>
+    include_once('vue/vue_accueil.php') ;
 
-
-<?php 
-	
-
-
-?>
