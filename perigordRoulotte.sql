@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.14
+-- version 4.0.9
 -- http://www.phpmyadmin.net
 --
--- Client :  127.0.0.1
--- Généré le :  Mar 14 Octobre 2014 à 14:25
--- Version du serveur :  5.6.17
--- Version de PHP :  5.5.12
+-- Client: localhost
+-- Généré le: Mar 14 Octobre 2014 à 17:33
+-- Version du serveur: 5.6.14
+-- Version de PHP: 5.5.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,8 +17,9 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données :  `perigordroulottes`
+-- Base de données: `perigordroulottes`
 --
+DROP DATABASE IF EXISTS perigordroulottes
 CREATE DATABASE IF NOT EXISTS `perigordroulottes` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 USE `perigordroulottes`;
 
@@ -119,7 +120,7 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   KEY `FK_Reservation_NumEtape` (`NumEtape`),
   KEY `FK_Reservation_NumRoulotte` (`NumRoulotte`),
   KEY `FK_Reservation_NumClient` (`NumClient`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
 
 --
 -- Contenu de la table `reservation`
@@ -196,8 +197,10 @@ INSERT INTO `tarif` (`TarifSejour`, `NbJours`, `NumSaison`) VALUES
 ('422.00', 2, 3),
 ('783.00', 3, 1),
 ('587.00', 3, 2),
+('587.00', 3, 3),
 ('960.00', 4, 1),
 ('720.00', 4, 2),
+('720.00', 4, 3),
 ('1200.00', 5, 1),
 ('900.00', 5, 2),
 ('900.00', 5, 3),
@@ -230,8 +233,8 @@ ALTER TABLE `reservation`
 -- Contraintes pour la table `tarif`
 --
 ALTER TABLE `tarif`
-  ADD CONSTRAINT `FK_Tarif_NumSaison` FOREIGN KEY (`NumSaison`) REFERENCES `saison` (`NumSaison`),
-  ADD CONSTRAINT `FK_Tarif_NbJours` FOREIGN KEY (`NbJours`) REFERENCES `duree` (`NbJours`);
+  ADD CONSTRAINT `FK_Tarif_NbJours` FOREIGN KEY (`NbJours`) REFERENCES `duree` (`NbJours`),
+  ADD CONSTRAINT `FK_Tarif_NumSaison` FOREIGN KEY (`NumSaison`) REFERENCES `saison` (`NumSaison`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
