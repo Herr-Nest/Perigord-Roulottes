@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 4.1.14
 -- http://www.phpmyadmin.net
 --
--- Client: localhost
--- Généré le: Mar 30 Septembre 2014 à 14:30
--- Version du serveur: 5.5.24-log
--- Version de PHP: 5.4.3
+-- Client :  127.0.0.1
+-- Généré le :  Mar 14 Octobre 2014 à 14:20
+-- Version du serveur :  5.6.17
+-- Version de PHP :  5.5.12
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -17,10 +17,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données: `perigordroulottes`
+-- Base de données :  `perigordroulottes`
 --
-CREATE DATABASE `perigordroulottes` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-USE `perigordroulottes`;
 
 -- --------------------------------------------------------
 
@@ -38,7 +36,15 @@ CREATE TABLE IF NOT EXISTS `client` (
   `TelClient` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
   `MailClient` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`NumClient`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+
+--
+-- Contenu de la table `client`
+--
+
+INSERT INTO `client` (`NumClient`, `NomClient`, `PrenomClient`, `AdresseClient`, `VilleClient`, `CPClient`, `TelClient`, `MailClient`) VALUES
+(1, 'Chirac', 'Jacques', '75 rue de l''Elysee', 'Paris', '75008', '0156978649', 'JacquesChirac@Gmail.com'),
+(2, 'Garros', 'Roland ', '2 Avenue Gordon Bennett', 'Paris', '75000', '0147434567', 'RolandGarros@Gmail.com');
 
 -- --------------------------------------------------------
 
@@ -75,10 +81,23 @@ CREATE TABLE IF NOT EXISTS `etape` (
   `VilleEtape` varchar(25) COLLATE utf8_unicode_ci DEFAULT NULL,
   `NomHeb` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   `SiteInternet` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `NumEtape_1` int(11) NOT NULL,
+  `EtapeSuivante` int(11) DEFAULT NULL,
   PRIMARY KEY (`NumEtape`),
-  KEY `FK_Etape_NumEtape_1` (`NumEtape_1`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+  KEY `FK_Etape_NumEtape_1` (`EtapeSuivante`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=8 ;
+
+--
+-- Contenu de la table `etape`
+--
+
+INSERT INTO `etape` (`NumEtape`, `VilleEtape`, `NomHeb`, `SiteInternet`, `EtapeSuivante`) VALUES
+(1, 'Brantome', 'Camping de Brantome', 'www.CampingdeBrantome.fr', NULL),
+(2, 'St Pardoux', 'Camping de St Pardoux', 'www.CampingdeStPardoux.fr', NULL),
+(3, 'St Saud Lacousiere', 'Camping de St Saud Lacousiere', 'www.CampingdeStSaudLacousiere.fr', NULL),
+(4, 'Bussiere Badil', 'Camping de Bussiere Badil', 'www.CampingdeBussiereBadil.fr', NULL),
+(5, 'Beaussac', 'Camping de Beaussac', 'www.CampingdeBeaussac.fr', NULL),
+(6, 'Monsec', 'Camping de Monsec', 'www.CampingdeMonsec.fr', NULL),
+(7, 'Bourdeilles', 'Camping de Bourdeilles', 'www.CampingdeBourdeilles.fr', NULL);
 
 -- --------------------------------------------------------
 
@@ -98,7 +117,14 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   KEY `FK_Reservation_NumEtape` (`NumEtape`),
   KEY `FK_Reservation_NumRoulotte` (`NumRoulotte`),
   KEY `FK_Reservation_NumClient` (`NumClient`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+
+--
+-- Contenu de la table `reservation`
+--
+
+INSERT INTO `reservation` (`NumReservation`, `DateDebut`, `NbJours`, `Montant`, `NumEtape`, `NumRoulotte`, `NumClient`) VALUES
+(1, '2015-07-01', 3, '783.00', 1, 3, 1);
 
 -- --------------------------------------------------------
 
@@ -110,7 +136,18 @@ CREATE TABLE IF NOT EXISTS `roulotte` (
   `NumRoulotte` int(11) NOT NULL AUTO_INCREMENT,
   `NomRoulotte` varchar(25) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`NumRoulotte`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=6 ;
+
+--
+-- Contenu de la table `roulotte`
+--
+
+INSERT INTO `roulotte` (`NumRoulotte`, `NomRoulotte`) VALUES
+(1, ' Irlandaises'),
+(2, 'Anglaises'),
+(3, 'Gitanes'),
+(4, 'Foraines'),
+(5, 'Camarguaises');
 
 -- --------------------------------------------------------
 
@@ -177,7 +214,7 @@ INSERT INTO `tarif` (`TarifSejour`, `NbJours`, `NumSaison`) VALUES
 -- Contraintes pour la table `etape`
 --
 ALTER TABLE `etape`
-  ADD CONSTRAINT `FK_Etape_NumEtape_1` FOREIGN KEY (`NumEtape_1`) REFERENCES `etape` (`NumEtape`);
+  ADD CONSTRAINT `FK_Etape_NumEtape_1` FOREIGN KEY (`EtapeSuivante`) REFERENCES `etape` (`NumEtape`);
 
 --
 -- Contraintes pour la table `reservation`
