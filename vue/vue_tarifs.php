@@ -5,7 +5,7 @@
 	<h1>Les Tarifs</h1>
         <div id="tarif">
             <table border=1>
-                    <tr><th></th><th>Été</th><th>Printemps</th><th>Automne</th></tr>
+                    <tr><th>Nom Séjour</th><th>Été</th><th>Printemps</th><th>Automne</th></tr>
                     <?php
                     $i=0;
                             foreach($lesTarifs as $unTarif){
@@ -16,7 +16,7 @@
                                     }
 
                                     $tarif=$unTarif['TarifSejour'];
-                                    echo "<td>$tarif</td>";
+                                    echo "<td>$tarif €</td>";
 
                                     if($i%3==2)
                                     {

@@ -111,12 +111,9 @@ section table
 	border-collapse: collapse ;
 }
 
-section table td
+section table td, section table th
 {
 	border: 1px black solid ;
+	padding:8px;
 }	
 	
-	section table th
-{
-	border: 1px black solid ;
-}
