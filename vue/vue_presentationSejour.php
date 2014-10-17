@@ -7,6 +7,7 @@
 <meta charset="UTF-8"> 
 	<table style="width:100%" >
 	
+	<h1><b>Presentation des Sejours</b></h1>
 	<tr><th>Nom Hebergement</th><th>Ville Etape</th><th>Site Internet</th><th>Description de l'étape</th></tr>
 	
 	<?php
