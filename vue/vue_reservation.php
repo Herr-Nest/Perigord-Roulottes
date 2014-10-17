@@ -1,22 +1,40 @@
 <?php
     include_once('header.php') ;
 ?>
-<section><br />
+<section>
     <h1>Pré-réservation</h1>
     <br />
+    <?php
+        if(isset($msg_error))
+        {
+            echo '<div class="msgerror">'.$msg_error.'</div>' ;
+        }
+    ?>
     <p>
         Avant de faire une demande de réservation, veuillez consulter
-        nos tarifs et nos séjours.
+        nos <a href="index.php?section=tarifs">tarifs</a> et nos 
+        <a href="index.php?section=sejours">séjours</a>.
     </p>
-    
-    <form method="post" action="reserv_roulotte.php">
-        
-        <p>Nom : <input type="text" name="nomclient" /></p>
-        <p>Prenom : <input type="text" name="prenomclient" /></p>
-        <p>Adresse : <input type="text" name="adresseclient" /></p>
-        <p>Code Postal : <input type="text" name="cpclient" /></p>
-        <p>Ville : <input type="text" name="villeclient" /></p>
-        
-    </form>
+    <br />
+    <div id="form_reserv">
+        <form method="post" action="index.php?section=reserv_roul">
+
+            <p>Nom : <input type="text" name="nomclient" class="texte"/></p>
+            <p>Prenom : <input type="text" name="prenomclient" class="texte"/></p>
+            <p>Adresse : <input type="text" name="adresseclient" class="texte"/></p>
+            <p>Code Postal : <input type="text" name="cpclient" class="texte"/></p>
+            <p>Ville : <input type="text" name="villeclient" class="texte"/></p>
+            <p>Date de départ : <input type="text" name="date" id="date" class="calendrier" value="Cliquez ici pour afficher le calendrier" /></p>
+            <p>Durée du séjour : <select name="dureesej">
+                <?php
+                    foreach($liste_sejours as $unsejour)
+                    {
+                        echo '<option value="'.$unsejour['NbJours'].'">'.$unsejour['NomSejour'].' ['.$unsejour['NbJours'].'jours] </option>' ;
+                    }
+                ?>
+            </select></p><br />
+            <p><input type="submit" value="Valider" class="button"/></p><br />
+        </form>
+    </div>
 </section>
 

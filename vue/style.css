@@ -56,9 +56,51 @@ nav ul
     padding: 0 ;
 }
 
+nav a
+{
+    font-size: 1em ;
+}
+
 section
 {
-    width: 100% ;
+    width: 98% ;
     background-color: white ;
     text-align: center ;
+    
+    padding: 1% ;
+}
+
+section #tarif table
+{
+    margin: auto ;
+}
+
+section #form_reserv input, section #form_reserv select
+{
+    width: 50% ;
+}
+
+section #form_reserv
+{
+    width: 50% ;
+    text-align: right ;
+    
+    margin: auto ;
+    padding-right: 22% ;
+}
+
+section #form_reserv input.button
+{
+    width: 20% ;
+    margin-right: 18% ;
+}
+
+section .msgerror
+{
+    margin: auto ;
+    padding: 1% ;
+    width: 50% ;
+    
+    border: 3px #FF0000 inset ;
+    background-color: #ff2222 ;
 }
