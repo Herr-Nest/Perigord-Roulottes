@@ -5,7 +5,7 @@
 
 <section>
 <meta charset="UTF-8"> 
-	<table style="width:100%" >
+	<table style="width:100%;border:1;" >
 	
 	<tr><td> <b> Nom Hebergement <b> </td><td> <b> Ville Etape <b> </td><td> <b> Site Internet </b> </td></tr>
 	

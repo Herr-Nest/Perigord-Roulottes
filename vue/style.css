@@ -104,3 +104,13 @@ section .msgerror
     border: 3px #FF0000 inset ;
     background-color: #ff2222 ;
 }
+
+section table
+{
+	border : 1px black solid ;
+	border-collapse: collapse ;
+}
+
+section table td
+{
+	border: 1px black solid ;
