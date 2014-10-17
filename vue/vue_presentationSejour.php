@@ -16,7 +16,7 @@
 	$wSiteInternet=$UnSejour['SiteInternet'];
 	$wDescriptionEtape=$UnSejour['DescriptionEtape'];
 	
-	echo"<tr><td>$wNomHebergement</td><td>$wVilleEtape</td><td>$wSiteInternet</td><td>$wDescriptionEtape</td></tr>";
+	echo"<tr><td>$wNomHebergement</td><td>$wVilleEtape</td><td><a href=http://$wSiteInternet>Site internet</a></td><td>$wDescriptionEtape</td></tr>";
 	}
 	
 	
