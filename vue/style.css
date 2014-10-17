@@ -114,3 +114,9 @@ section table
 section table td
 {
 	border: 1px black solid ;
+}	
+	
+	section table th
+{
+	border: 1px black solid ;
+}

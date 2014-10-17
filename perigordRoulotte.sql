@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.9
+-- version 4.1.14
 -- http://www.phpmyadmin.net
 --
--- Client: localhost
--- Généré le: Mar 14 Octobre 2014 à 17:33
--- Version du serveur: 5.6.14
--- Version de PHP: 5.5.6
+-- Client :  127.0.0.1
+-- Généré le :  Ven 17 Octobre 2014 à 11:27
+-- Version du serveur :  5.6.17
+-- Version de PHP :  5.5.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données: `perigordroulottes`
+-- Base de données :  `perigordroulottes`
+
 --
 DROP DATABASE IF EXISTS perigordroulottes;
 CREATE DATABASE IF NOT EXISTS `perigordroulottes` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
@@ -96,12 +97,12 @@ CREATE TABLE IF NOT EXISTS `etape` (
 
 INSERT INTO `etape` (`NumEtape`, `VilleEtape`, `NomHeb`, `SiteInternet`, `DescriptionEtape`, `EtapeSuivante`) VALUES
 (1, 'Brantome', 'Camping de Brantome', 'www.CampingdeBrantome.fr', 'Pour un agréable séjour en famille, le camping de Brantome vous accueille au coeur du Perigord.Cette petite structure tout confort de 40 emplacements.', 2),
-(2, 'St Pardoux', 'Camping de St Pardoux', 'www.CampingdeStPardoux.fr', NULL, 3),
-(3, 'St Saud Lacousiere', 'Camping de St Saud Lacousiere', 'www.CampingdeStSaudLacousiere.fr', NULL, 4),
-(4, 'Bussiere Badil', 'Camping de Bussiere Badil', 'www.CampingdeBussiereBadil.fr', NULL, 5),
-(5, 'Beaussac', 'Camping de Beaussac', 'www.CampingdeBeaussac.fr', NULL, 6),
-(6, 'Monsec', 'Camping de Monsec', 'www.CampingdeMonsec.fr', NULL, 7),
-(7, 'Bourdeilles', 'Camping de Bourdeilles', 'www.CampingdeBourdeilles.fr', NULL, 1);
+(2, 'St Pardoux', 'Camping de St Pardoux', 'www.CampingdeStPardoux.fr', 'Pour un agréable séjour en famille, le camping de St Pardoux vous accueille au coeur du Perigord.Cette petite structure tout confort de 40 emplacements.', 3),
+(3, 'St Saud Lacousiere', 'Camping de St Saud Lacousiere', 'www.CampingdeStSaudLacousiere.fr', 'Pour un agréable séjour en famille, le camping de St Saud Lacousiere vous accueille au coeur du Perigord.Cette petite structure tout confort de 40 emplacements.', 4),
+(4, 'Bussiere Badil', 'Camping de Bussiere Badil', 'www.CampingdeBussiereBadil.fr', 'Pour un agréable séjour en famille, le camping de Bussiere Badil vous accueille au coeur du Perigord.Cette petite structure tout confort de 40 emplacements.', 5),
+(5, 'Beaussac', 'Camping de Beaussac', 'www.CampingdeBeaussac.fr', 'Pour un agréable séjour en famille, le camping de Beaussac vous accueille au coeur du Perigord.Cette petite structure tout confort de 40 emplacements.', 6),
+(6, 'Monsec', 'Camping de Monsec', 'www.CampingdeMonsec.fr', 'Pour un agréable séjour en famille, le camping de Monsec vous accueille au coeur du Perigord.Cette petite structure tout confort de 40 emplacements.', 7),
+(7, 'Bourdeilles', 'Camping de Bourdeilles', 'www.CampingdeBourdeilles.fr', 'Pour un agréable séjour en famille, le camping de Bourdeilles vous accueille au coeur du Perigord.Cette petite structure tout confort de 40 emplacements.', 1);
 
 -- --------------------------------------------------------
 

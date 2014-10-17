@@ -5,9 +5,9 @@
 
 <section>
 <meta charset="UTF-8"> 
-	<table style="width:100%;border:1;" >
+	<table style="width:100%" >
 	
-	<tr><td> <b> Nom Hebergement <b> </td><td> <b> Ville Etape <b> </td><td> <b> Site Internet </b> </td></tr>
+	<tr><th>Nom Hebergement</th><th>Ville Etape</th><th>Site Internet</th><th>Description de l'étape</th></tr>
 	
 	<?php
 	
