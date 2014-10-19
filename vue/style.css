@@ -116,4 +116,83 @@ section table td, section table th
 	border: 1px black solid ;
 	padding:8px;
 }	
+#coverflow{
+	width: 725px;
+	margin:auto;
+}
+#coverflow ul{
+    width: 725px;
+    padding: 0;
+	-webkit-perspective:500px;
+	perspective:500px;
+}
+
+#coverflow ul li{
+	overflow:hidden;
+	border-radius:5px;	
+    display: inline-block;
+    width: 165px;
+    height: 124px;
+    background: rgba(0,0,0,0.3);
+	transform:rotateY(45deg);
+	-webkit-transform:rotateY(45deg);
+	margin-right:-16px;
+	margin-left:-16px;
+	transition:.45s;
+	position:relative;
+	z-index:50;
+	-webkit-z-index:50;
+	box-shadow: 0px 10px 10px #888;
+}
+#coverflow ul li:first-child,#coverflow ul li:last-child{
+	z-index:45;
+	-webkit-z-index:45;
+}
+#coverflow ul li:first-child{
+	box-shadow: -10px 10px 10px #888;
+}
+#coverflow ul li:last-child{
+	box-shadow: 10px 10px 10px #888;
 	
+}
+
+#coverflow ul li:nth-child(3){
+	-webkit-transform:rotateY(0deg) scale(1.1);
+	-webkit-z-index:55;
+	transform:rotateY(0deg) scale(1.1);
+	z-index:55;
+	box-shadow: 0px 10px 10px #888;
+}
+#coverflow ul li:nth-child(3) ~ li{
+	-webkit-transform:rotateY(-45deg);
+	transform:rotateY(-45deg);
+}
+#coverflow ul li:hover,#coverflow ul li:nth-child(3) ~ li:hover,#coverflow ul li:first-child:hover{
+    -webkit-transform: rotateY(0deg) scale(1.49);
+    transform: rotateY(0deg) scale(1.49);
+	-webkit-z-index:60;
+	z-index:60;
+	box-shadow: 0px 10px 10px #888;
+}
+
+#coverflow ul:hover li:hover ~ li{
+    transform: rotateY(-45deg);
+    -webkit-transform: rotateY(-45deg);
+}
+
+#coverflow ul:hover li:not(:hover){
+    transform: rotateY(45deg);
+    -webkit-transform: rotateY(45deg);
+}
+
+#coverflow ul li:nth-child(odd){
+	background:blue;
+}
+
+.thumbnail{
+	width:100%;
+}
+
+.thumbnail:hover{
+	width:100%;
+}

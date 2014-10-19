@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-            <meta charset="utf-8">
-            <link rel="stylesheet" href="vue/style.css" />
-            <link rel="stylesheet" media="screen" type="text/css" title="Design" href="js/module_calendrier.css" />
-            <script type="text/javascript" src="js/module_calendrier.js"></script>
-            <title>Accueil</title>
+    	<meta charset="utf-8">
+    	<link rel="stylesheet" href="vue/style.css" />
+    	<link rel="stylesheet" media="screen" type="text/css" title="Design" href="js/module_calendrier.css" />
+    	<script type="text/javascript" src="js/module_calendrier.js"></script>
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<script src="js/lightbox-2.6.min.js"></script>
+		<link rel="stylesheet" href="css/lightbox.css"/>
+    	<title>Accueil</title>
     </head>
 	
     <body>
