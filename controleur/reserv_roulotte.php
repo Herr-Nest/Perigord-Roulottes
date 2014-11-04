@@ -5,7 +5,8 @@
     {
         $msg_error = 'Veuillez remplir tout les champs' ;
         
-        include_once('vue/vue_reservation.php') ;
+        include_once('controleur/reservation.php') ;
+        
     }
     else
     {

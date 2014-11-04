@@ -133,7 +133,7 @@ section table td, section table th
     display: inline-block;
     width: 165px;
     height: 124px;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,1);
 	transform:rotateY(45deg);
 	-webkit-transform:rotateY(45deg);
 	margin-right:-16px;
@@ -172,7 +172,7 @@ section table td, section table th
     transform: rotateY(0deg) scale(1.49);
 	-webkit-z-index:60;
 	z-index:60;
-	box-shadow: 0px 10px 10px #888;
+	box-shadow: 0px 10px 10px #888;	
 }
 
 #coverflow ul:hover li:hover ~ li{
@@ -186,7 +186,7 @@ section table td, section table th
 }
 
 #coverflow ul li:nth-child(odd){
-	background:blue;
+	background:rgba(0,0,0,1);
 }
 
 .thumbnail{
