@@ -5,14 +5,16 @@
 	<h1>Les Tarifs</h1>
         <div id="tarif">
             <table border=1>
-                    <tr><th>Nom Séjour</th><th>Été</th><th>Printemps</th><th>Automne</th></tr>
+                    <tr><th>Nom Séjour</th><th>Nombres de Jours </th><th>Été</th><th>Printemps</th><th>Automne</th></tr>
                     <?php
                     $i=0;
                             foreach($lesTarifs as $unTarif){
                                     if($i%3==0)
                                     {
                                             $sejour=$unTarif['NomSejour'];
-                                            echo "<tr><td>$sejour</td>";
+											$duree=$unTarif['NbJours'];
+										
+                                            echo "<tr><td>	$sejour</td><td>$duree</td>";
                                     }
 
                                     $tarif=$unTarif['TarifSejour'];
