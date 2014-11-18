@@ -61,6 +61,10 @@ nav a
     font-size: 1em ;
 }
 
+h3
+{
+    text-align:center;
+}
 section
 {
     width: 98% ;
@@ -86,13 +90,12 @@ section #form_reserv
     text-align: right ;
     
     margin: auto ;
-    padding-right: 22% ;
 }
 
 section #form_reserv input.button
 {
     width: 20% ;
-    margin-right: 18% ;
+   margin-right: 35% ;
 }
 
 section .msgerror
@@ -105,6 +108,11 @@ section .msgerror
     background-color: #ff2222 ;
 }
 
+section #form_reserv input, section #form_reserv select
+{
+    margin-right:20px;
+    
+}
 section table
 {
 	border : 1px black solid ;

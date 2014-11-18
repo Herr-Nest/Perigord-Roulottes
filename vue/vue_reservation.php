@@ -18,12 +18,14 @@
     <br />
     <div id="form_reserv">
         <form method="post" action="index.php?section=reserv_roul">
-
+            <h3>Vos coordonnées</h3>
             <p>Nom : <input type="text" name="nomclient" class="texte"/></p>
             <p>Prenom : <input type="text" name="prenomclient" class="texte"/></p>
             <p>Adresse : <input type="text" name="adresseclient" class="texte"/></p>
             <p>Code Postal : <input type="text" name="cpclient" class="texte"/></p>
             <p>Ville : <input type="text" name="villeclient" class="texte"/></p>
+            <hr />
+            <h3>Détails du séjour</h3>
             <p>Date de départ : <input type="text" name="date" id="date" class="calendrier" value="Cliquez ici pour afficher le calendrier" /></p>
             <p>Durée du séjour : <select name="dureesej">
                 <?php
@@ -32,7 +34,16 @@
                         echo '<option value="'.$unsejour['NbJours'].'">'.$unsejour['NomSejour'].' ['.$unsejour['NbJours'].'jours] </option>' ;
                     }
                 ?>
-            </select></p><br />
+            </select></p>
+            <p>Ville de départ : <select name="villedep">
+                <?php
+                    foreach($liste_etapes as $uneEtape)
+                    {
+                        echo'<option value='.$uneEtape['NumEtape'].'>'.$uneEtape['VilleEtape'].'</option>';
+                    }
+                ?>
+                
+                </select></p><br/>
             <p><input type="submit" value="Valider" class="button"/></p><br />
         </form>
     </div>
