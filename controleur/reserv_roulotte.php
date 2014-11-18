@@ -20,6 +20,6 @@
         $nbJours=$_POST['dureesej'];
         $villedepart=get_villeEtape($_POST['villedep']);
         
-        include_once('vue/vue_recap_reservation');
+        include_once('vue/vue_recap_reservation.php');
 }
 

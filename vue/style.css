@@ -204,3 +204,22 @@ section table td, section table th
 .thumbnail:hover{
 	width:100%;
 }
+
+#floatleft img
+{
+float : left ;
+width:20% ;
+height:20%;
+position : relative;
+top = -10px;
+
+}
+#reservation
+{
+	text-align: center ;
+}
+
+#details
+{
+	padding-right: 160px ;
+}
