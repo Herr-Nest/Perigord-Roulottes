@@ -19,14 +19,14 @@
     <div id="form_reserv">
         <form method="post" action="index.php?section=reserv_roul">
             <h3>Vos coordonnées</h3>
-            <p>Nom : <input type="text" name="nomclient" class="texte"/></p>
-            <p>Prenom : <input type="text" name="prenomclient" class="texte"/></p>
-            <p>Adresse : <input type="text" name="adresseclient" class="texte"/></p>
-            <p>Code Postal : <input type="text" name="cpclient" class="texte"/></p>
-            <p>Ville : <input type="text" name="villeclient" class="texte"/></p>
+            <p>Nom : <input type="text" name="nomclient" class="texte" required/></p>
+            <p>Prenom : <input type="text" name="prenomclient" class="texte" required/></p>
+            <p>Adresse : <input type="text" name="adresseclient" class="texte" required/></p>
+            <p>Code Postal : <input type="text" name="cpclient" class="texte" required/></p>
+            <p>Ville : <input type="text" name="villeclient" class="texte" required/></p>
             <hr />
             <h3>Détails du séjour</h3>
-            <p>Date de départ : <input type="text" name="date" id="date" class="calendrier" value="Cliquez ici pour afficher le calendrier" /></p>
+            <p>Date de départ : <input type="text" name="date" id="date" class="calendrier" value="Cliquez ici pour afficher le calendrier" required/></p>
             <p>Durée du séjour : <select name="dureesej">
                 <?php
                     foreach($liste_sejours as $unsejour)
