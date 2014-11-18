@@ -205,6 +205,21 @@ section table td, section table th
 	width:100%;
 }
 
+section #billets
+{
+    
+    border: 1px black solid ;
+    width: 80% ;
+    margin: auto ;
+    padding : 1% ;
+}
+
+section .unbillet
+{
+    text-align: left ;
+    margin: 1% ;
+    padding: 1% ;
+}
 #floatleft img
 {
 float : left ;
