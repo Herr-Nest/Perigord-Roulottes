@@ -22,6 +22,9 @@
                         case 'reserv_roul' :
                                 include_once('controleur/reserv_roulotte.php');
                                 break ;
+                        case 'livredor' :
+                                include_once('controleur/livredor.php');
+                                break ;
 		}
 	}
 ?>

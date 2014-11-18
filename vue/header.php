@@ -21,6 +21,6 @@
                 --><a href='index.php?section=sejours'><li>Séjours</li></a><!--
                 --><a href='index.php?section=tarifs'><li>Tarifs</li></a><!--
                 --><a href='index.php?section=reservation'><li>Réservation</li></a><!--
-                --><li>Livre d'or</li><!--
+                --><a href='index.php?section=livredor'<li>Livre d'or</li></a><!--
             --></ul>
         </nav>
