@@ -12,6 +12,15 @@
 		
 	}
 	
+        function get_villeEtape($numEtape)
+        {
+            global $bdd;
+            
+            $req=$bdd->prepare("SELECT VilleEtape FROM etape WHERE NumEtape=$numEtape");
+            $req->execute();
+            $VilleEtape=$req->fetchColumn();
+            return $VilleEtape;
+        }
 	function get_Suivant($i)
 	{
 	global $bdd;
