@@ -12,7 +12,7 @@
         foreach($billets as $unbillet)
         {
             echo '<div class="unbillet"' ;
-        echo '<p>Par '.$unbillet['auteur'].' le '.$unbillet['datebillet'].' à '.$unbillet['heurebillet'].'</p>' ;
+        echo '<p><u>Par <b>'.$unbillet['auteur'].'</b> le '.$unbillet['datebillet'].' à '.$unbillet['heurebillet'].'</u></p>' ;
             echo '<p>'.$unbillet['texte'].'</p>' ;
             echo '</div>' ;
         }
@@ -26,7 +26,7 @@
     ?>
     
     </div>
-    <p>Si vous avez apprécié le séjour, n'hésitez pas à laisser un petit commentaire :-) lol</p>
+    <p>Si vous avez apprécié le séjour, n'hésitez pas à laisser un petit commentaire </p>
     
     <?php
         if(isset($msg_confirm))
