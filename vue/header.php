@@ -8,7 +8,7 @@
 		<script src="js/jquery-1.10.2.min.js"></script>
 		<script src="js/lightbox-2.6.min.js"></script>
 		<link rel="stylesheet" href="css/lightbox.css"/>
-    	<title>Accueil</title>
+    	<title><?php echo $title; ?></title>
     </head>
 	
     <body>

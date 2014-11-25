@@ -100,12 +100,10 @@ section #form_reserv input.button
 
 section .msgerror
 {
-    margin: auto ;
-    padding: 1% ;
-    width: 50% ;
-    
-    border: 3px #FF0000 inset ;
-    background-color: #ff2222 ;
+      
+    display:none;
+    color: #ff2222 ;
+	position:absolute;
 }
 
 section #form_reserv input, section #form_reserv select

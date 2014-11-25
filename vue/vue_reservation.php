@@ -4,16 +4,36 @@
 <script>
 	function verifSaisie()
 	{
-		
+		var i=0;
+		while(i<=document.getElementsByTagName('input').length-2)
+			{
+				
+				document.getElementsByTagName('input')[i].style.borderColor='initial';
+				document.getElementsByClassName('msgerror')[i].style.display='none';
+				i=i+1;
+			}
 		var ok=true;
-		if((formReservation.nomclient.value=="") || (formReservation.prenomclient.value=="") || (formReservation.adresseclient.value=="") || (formReservation.cpclient.value=="") || (formReservation.villeclient.value=="") || (formReservation.date.value==""))
+		var i=0;
+		while(i<=document.getElementsByTagName('input').length-2)
+			{
+			document.getElementsByTagName('input')[i].onkeyup=function(){
+			
+			
+			
+			}
+				if(document.getElementsByTagName('input')[i].value=="")
+				{
+					document.getElementsByTagName('input')[i].style.borderColor='red';
+					document.getElementsByClassName('msgerror')[i].style.display='initial';
+					ok=false;
+				}
+				i=i+1;
+				
+			}
+		if(document.getElementsByName('cpclient')[0].value.length!=5)
 		{
-			alert('veuillez remplir tous les champs');
-			ok=false;
-		}
-		if((formReservation.cpclient.value.length!=5) || (isNaN(formReservation.cpclient.value)))
-		{
-			alert('le code postal est incorrect');
+			document.getElementsByName('cpclient')[0].style.borderColor='red';
+			document.getElementsByClassName('msgerror')[3].style.display='initial';
 			ok=false;
 		}
 		if(ok)
@@ -31,12 +51,7 @@
 <section>
     <h1>Pré-réservation</h1>
     <br />
-    <?php
-        if(isset($msg_error))
-        {
-            echo '<div class="msgerror">'.$msg_error.'</div>' ;
-        }
-    ?>
+  
     <p>
         Avant de faire une demande de réservation, veuillez consulter
         nos <a href="index.php?section=tarifs">tarifs</a> et nos 
@@ -46,14 +61,14 @@
     <div id="form_reserv">
         <form name='formReservation'method="post" action="index.php?section=reserv_roul">
             <h3>Vos coordonnées</h3>
-            <p>Nom : <input type="text" name="nomclient" class="texte"/></p>
-            <p>Prenom : <input type="text" name="prenomclient" class="texte" /></p>
-            <p>Adresse : <input type="text" name="adresseclient" class="texte" /></p>
-            <p>Code Postal : <input type="text" name="cpclient" class="texte" /></p>
-            <p>Ville : <input type="text" name="villeclient" class="texte" /></p>
+            <p>Nom : <input type="text" name="nomclient" class="texte"/><span class='msgerror'>Champ obligatoire</span></p>
+            <p>Prenom : <input type="text" name="prenomclient" class="texte" /><span class='msgerror'>Champ obligatoire</span></p>
+            <p>Adresse : <input type="text" name="adresseclient" class="texte" /><span class='msgerror'>Champ obligatoire</span></p>
+            <p>Code Postal : <input type="text" name="cpclient" class="texte" /><span class='msgerror'>Code postal incorrect</span></p>
+            <p>Ville : <input type="text" name="villeclient" class="texte" /><span class='msgerror'>Champ obligatoire</span></p>
             <hr />
             <h3>Détails du séjour</h3>
-            <p>Date de départ : <input type="text" name="date" id="date" class="calendrier" placeholder="Cliquez ici pour afficher le calendrier" readonly /></p>
+            <p>Date de départ : <input type="text" name="date" id="date" class="calendrier" placeholder="Cliquez ici pour afficher le calendrier" readonly /><span class='msgerror'>Champ obligatoire</span></p>
             <p>Durée du séjour : <select name="dureesej">
                 <?php
                     foreach($liste_sejours as $unsejour)
