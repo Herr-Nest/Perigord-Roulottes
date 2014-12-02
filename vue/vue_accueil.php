@@ -13,5 +13,5 @@
 		<li><a href="vue/img/roulotte2.jpg" data-lightbox="perigordRoulottes"><img src="vue/img/roulotte2.jpg" class="thumbnail"/></a></li>
 	</ul>
 	</div>
-		<br/><h1>Bienvenue dans le site Perigord Roulottes </h1><br/><!--
+		<br/><h1>Bienvenue sur le site Perigord Roulottes </h1><br/><!--
 	--></section>

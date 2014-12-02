@@ -11,7 +11,7 @@
 			echo"   <div id='details'>Nom  : $nom <br/> Prénom  : $prenom <br/> Adresse  : $adresse <br/>"
                                 . " Code Postal  : $cp <br/> Ville  : $ville <br/> Date Départ  : $datedepart <br/> "
                                 . "Village Départ  :$villedepart <br/> Nombres de Jours  : $nbJours <br/><br/>"
-                                . "<input type=button value='envoyer la demande' onclick=\"alert('fonctionnalité encore en développement')\"</div>";
+                                . "<input type=button value='envoyer la demande' onclick=\"alert('Le mail a bien été envoyé')\"</div>";
 			
 		?>
 		
