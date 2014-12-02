@@ -210,6 +210,7 @@ section #billets
     width: 80% ;
     margin: auto ;
     padding : 1% ;
+    word-wrap: break-word;
 }
 
 section .unbillet
