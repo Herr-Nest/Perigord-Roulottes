@@ -1,9 +1,15 @@
 <?php
     include_once('header.php') ;
+    
 ?>
 <script>
 	function verifSaisie()
 	{
+                var patternDate=/(\d{2})\/(\d{2})\/(\d{4})/;
+                var dateDepart=new Date(document.getElementById('date').value.replace(patternDate,'$3-$2-$1'));
+                var dateAujourdhui='<?php echo $dateAujourdhui;?>';
+                var dateJour=new Date(dateAujourdhui.replace(patternDate,'$3-$2-$1'));
+                
 		var i=0;
 		while(i<=document.getElementsByTagName('input').length-2)
 			{
@@ -30,12 +36,18 @@
 				i=i+1;
 				
 			}
-		if(document.getElementsByName('cpclient')[0].value.length!=5)
+		if(document.getElementsByName('cpclient')[0].value.length!=5 || isNaN(document.getElementsByName('cpclient')[0].value))
 		{
 			document.getElementsByName('cpclient')[0].style.borderColor='red';
 			document.getElementsByClassName('msgerror')[3].style.display='initial';
 			ok=false;
 		}
+                if(dateDepart<dateJour)
+                {
+                    document.getElementsByName('date')[0].style.borderColor='red';
+                    document.getElementsByClassName('msgerror')[5].style.display='initial';
+                    ok=false;
+                }
 		if(ok)
 		{
 			formReservation.submit();
@@ -51,7 +63,7 @@
 <section>
     <h1>Pré-réservation</h1>
     <br />
-  
+   
     <p>
         Avant de faire une demande de réservation, veuillez consulter
         nos <a href="index.php?section=tarifs">tarifs</a> et nos 
@@ -68,7 +80,7 @@
             <p>Ville : <input type="text" name="villeclient" class="texte" /><span class='msgerror'>Champ obligatoire</span></p>
             <hr />
             <h3>Détails du séjour</h3>
-            <p>Date de départ : <input type="text" name="date" id="date" class="calendrier" placeholder="Cliquez ici pour afficher le calendrier" readonly /><span class='msgerror'>Champ obligatoire</span></p>
+            <p>Date de départ : <input type="text" name="date" id="date" class="calendrier" placeholder="Cliquez ici pour afficher le calendrier" readonly /><span class='msgerror'>Date Incorrecte</span></p>
             <p>Durée du séjour : <select name="dureesej">
                 <?php
                     foreach($liste_sejours as $unsejour)
