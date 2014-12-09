@@ -32,28 +32,27 @@ nav
 {
     text-align: center ;
     width: 100% ;
-    border: 1px black solid ;
     display: inline-block ;
     
-    background-color : white ;
+    background-image: linear-gradient(#33FF33,#FFFFFF) ;
 }
 
 nav li
 {
     width: 17.7%;
     display: inline-block ;
-    
     padding: 1% ;
     
     border: 1px black solid ;
     
-    background-image: url('img/banniere_test.png') ;
+    background-image: linear-gradient(#33FF33,#FFFFFF) ;
 }
 
 nav ul
 {
     border: 1px black solid ;
     padding: 0 ;
+    margin : 0 ;
 }
 
 nav a
