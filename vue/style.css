@@ -17,6 +17,15 @@ body
     margin-right: auto ;
 }
 
+#logo
+{
+    width:106px;
+    height:100px;
+    position:absolute;
+    top:21px;
+    left:270px;
+}
+
 header
 {
     width: 100% ;

@@ -13,6 +13,7 @@
 	
     <body>
         <header>
+            <img src="vue/img/logo.png" id="logo"/>
             <img src="vue/img/banniere_test.png" alt="banniere" />
         </header>
         <nav>
