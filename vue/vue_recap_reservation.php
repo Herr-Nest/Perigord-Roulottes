@@ -7,7 +7,7 @@
 
 		<?php
 			
-			echo"<div id='floatleft'><img src='vue/img/logo.jpg'  /></div>";
+			echo"<div id='floatleft'><img src='vue/img/logo.png'  /></div>";
 			echo"   <div id='details'>Nom  : $nom <br/> Prénom  : $prenom <br/> Adresse  : $adresse <br/>"
                                 . " Code Postal  : $cp <br/> Ville  : $ville <br/> Date Départ  : $datedepart <br/> "
                                 . "Village Départ  :$villedepart <br/> Nombres de Jours  : $nbJours <br/><br/>"

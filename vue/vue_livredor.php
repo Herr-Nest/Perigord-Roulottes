@@ -45,6 +45,7 @@
         <p>Commentaire : <br/>
             <textarea id="billet" name='billet' rows='6' cols='30' required></textarea>
         </p>
+        
         <input type='submit' value='Envoyer' />
     </form>
 </section>
