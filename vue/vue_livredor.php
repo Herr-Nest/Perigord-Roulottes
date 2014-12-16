@@ -41,9 +41,9 @@
     
     <form method='post' action='index.php?section=livredor'>
         
-        <p>Pseudo : <input type='text' name='pseudo' value='Anonyme'/></p>
+        <p>Pseudo : <input type='text' name='pseudo' value='Anonyme' required/></p>
         <p>Commentaire : <br/>
-            <textarea name='billet' rows='6' cols='30'></textarea>
+            <textarea id="billet" name='billet' rows='6' cols='30' required></textarea>
         </p>
         <input type='submit' value='Envoyer' />
     </form>
